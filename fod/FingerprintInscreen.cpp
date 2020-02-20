@@ -91,7 +91,7 @@ Return<void> FingerprintInscreen::onPress() {
 
 Return<void> FingerprintInscreen::onRelease() {
     set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
-    TouchFeatureService->resetTouchMode(Touch_Fod_Enable);
+    TouchFeatureService->setTouchMode(Touch_Fod_Enable, 0);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
 }
